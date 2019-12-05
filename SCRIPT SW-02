@@ -1,0 +1,31 @@
+enable 
+configure terminal
+ip default-gateway 192.168.14.1
+vlan 146
+name GERENCIAMENTO
+int vlan 146
+ip add 192.168.14.14 255.255.255.240
+vlan 147
+name VLAN-147
+vlan 148
+name VLAN-148
+vlan 149
+name VLAN-149
+int f0/4
+switchport mode access
+switchport access vlan 146
+int f0/1
+switchport mode access
+switchport access vlan 147
+int f0/2
+switchport mode access
+switchport access vlan 148
+int f0/3
+switchport mode access
+switchport access vlan 149
+int g0/1
+switchport mode trunk
+switchport trunk native vlan 151
+switchport trunk allowed vlan 142-151
+no shut
+do wr
