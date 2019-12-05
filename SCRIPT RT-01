@@ -1,0 +1,26 @@
+enable
+configure terminal
+int g0/1.142
+encapsulation dot1q 142
+ip add 172.16.14.1 255.255.255.240
+ip helper-address 172.16.14.5
+int g0/1.143
+encapsulation dot1q 143
+ip add 172.16.14.17 255.255.255.240
+ip helper-address 172.16.14.5
+int g0/1.144
+encapsulation dot1q 144
+ip add 172.16.14.33 255.255.255.240
+ip helper-address 172.16.14.5
+int g0/1.145
+encapsulation dot1q 145
+ip add 172.16.14.49 255.255.255.240
+ip helper-address 172.16.14.5
+int g0/1
+no shut
+int s0/0/0
+ip add 200.100.100.1 255.255.255.252
+no shut
+exit
+ip route 192.168.14.0 255.255.255.0 200.100.100.2
+do wr
