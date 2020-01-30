@@ -1,0 +1,21 @@
+enable
+configure termminal
+vlan 10
+name vlan-10
+exit
+vlan 20 
+nome vlan-20
+exit
+interface range fastethernet0/1-fastethernet0/3
+switchport mode access 
+switchport access vlan 10
+exit
+interface range fastethernet0/4-fastethernet0/6
+switchport mode access 
+switchport access vlan 20
+exit
+interface gigaethernet0/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+end
+we
