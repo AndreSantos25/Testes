@@ -1,0 +1,94 @@
+en 
+conf t
+int f0/24
+switchport mode access 
+switchport access vlan 5
+
+int f0/1
+switchport mode access 
+switchport access vlan 10
+
+int f0/2
+switchport mode access 
+switchport access vlan 20
+
+int f0/3
+switchport mode access 
+switchport access vlan 30
+
+int f0/4
+switchport mode access 
+switchport access vlan 40
+
+int f0/5
+switchport mode access 
+switchport access vlan 50
+
+int f0/6
+switchport mode access 
+switchport access vlan 60
+
+int f0/7
+switchport mode access 
+switchport access vlan 70
+
+int f0/8
+switchport mode access
+switchport access vlan 80
+
+int f0/9
+switchport mode access 
+switchport access vlan 90
+
+int f0/10
+switchport mode access 
+switchport access vlan 100
+
+int f0/11
+switchport mode access 
+switchport access vlan 110
+
+int f0/12
+switchport mode access 
+switchport access vlan 120
+
+int f0/13
+switchport mode access 
+switchport access vlan 130
+
+int f0/14
+switchport mode access 
+switchport access vlan 140
+
+int f0/15
+switchport mode access 
+switchport access vlan 150
+
+int f0/16
+switchport mode access 
+switchport access vlan 160
+
+int f0/17
+switchport mode access 
+switchport access vlan 170
+
+int f0/18
+switchport mode access 
+switchport access vlan 180
+
+int f0/19
+switchport mode access 
+switchport access vlan 190
+
+int f0/20
+switchport mode access 
+switchport access vlan 200
+
+int g0/0
+switchport mode trunk
+switchport trunk allowed vlan all
+
+do wr
+
+
+
