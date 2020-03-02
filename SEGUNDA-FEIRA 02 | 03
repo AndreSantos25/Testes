@@ -1,8 +1,9 @@
 en
 conf t
+enable secret class
 ip domain-name cisco.com
 hostname S1
-banner motd "aviso não devem entrar"
+banner motd "warning"
 crypto key generate rsa general-key modulus 1024
 ip ssh version 2
 username admin password ccna
@@ -18,7 +19,8 @@ int range g0/1,g0/2
 shut
 int range f0/1,f0/2
 switchport mode access
-switchport port-security max 1
+switchport port-security
+switchport port-security max 2
 switchport port-security mac-address sticky
 no shut 
 
