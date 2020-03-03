@@ -1,15 +1,16 @@
-en
-conf t
-enable secret class
-ip domain-name cisco.com
+enable
+configure terminal
+enable secret class --> Senha que vc usa pra entrar na enable<--
+
+ip domain-name cisco.com -->
 hostname S1
-banner motd "warning"
-crypto key generate rsa general-key modulus 1024
-ip ssh version 2
+banner motd "warning" --> banner que aparece quando vc liga o equipamento  <--
+crypto key generate rsa general-key modulus 1024 --> Criptografia de senha <--
+ip ssh version 2 --> acesso remoto <--
 username admin password ccna
 line vty 0 15
 login local
-transport input ssh
+transport input ssh --> ativa o acesso remoto <--
 line console 0
 password cisco
 login
